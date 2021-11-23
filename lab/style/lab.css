@@ -1,0 +1,23 @@
+body {
+  padding: 1.5em;
+  max-width: 8.5in;
+  font-family: sans-serif;
+}
+
+h3 {
+  margin-top: 2em;
+  text-decoration: underline;
+}
+
+h4 {
+  margin-top: 1em;
+}
+
+pre.code {
+  font-family: monospace;
+  margin-left: 2em;
+}
+
+span.code {
+  font-family: monospace;
+}
