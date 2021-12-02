@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <script src="../dist/bundle.js"></script>
+    <link rel="stylesheet" href="../style/lab.css">
+    <title>Lab assignment 5: CS 320, Fall 2021</title>
+
+    <style>
+      h1:not(:first-child) {
+        margin-top: 2em;
+      }
+
+      h1 {
+        font-size: 120%;
+      }
+
+      th, td {
+        border: 1px black solid;
+      }
+
+      th {
+        padding: 1em;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      .ast, #tokens {
+        margin: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Source input</h1>
+    <p>
+      <form onsubmit="Lab5.step1(); return false">
+        <label for="source">Enter expression:</label>
+        <input type="text" id="source" value='A & B ? 1 + - 2 + 3 : "xyz"' style="width: 50%">
+        <input type="submit" value="Analyze">
+      </form>
+    </p>
+
+    <h1>After tokenizing</h1>
+    <p>
+      Token list: <div id="tokens"></div>
+    </p>
+
+    <h1>After parsing</h1>
+    <p>
+      Abstract syntax tree: <div id="parse" class="ast"></div>
+      Fully-parenthesized expression: <div id="parens"></div>
+    </p>
+
+    <h1>After desugaring</h1>
+    <p>
+      Abstract syntax tree: <div id="desugared" class="ast"></div>
+      Fully-parenthesized expression: <div id="desugared_parens"></div>
+    </p>
+
+  </body>
+
+</html>
